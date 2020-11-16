@@ -9,9 +9,9 @@ app.use(cors())
 
 function getConnection () {
   return mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'TTTtry123456',
+    host: constant.dbHost,
+    user: constant.dbUser,
+    password: constant.dbPsw,
     database: 'book'
   })
 }

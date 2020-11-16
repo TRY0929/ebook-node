@@ -1,7 +1,16 @@
 const path = require('path')
+const env = require('./env')
 
-const resUrl =  'http://localhost:8082'
-const mp3FilePath = '/Users/ARASHI/Desktop/resource/mp3'
+let resUrl
+let mp3FilePath
+if (env === 'dev') {
+  resUrl =  'http://localhost:8082'
+  mp3FilePath = '/Users/ARASHI/Desktop/resource/mp3'
+} else if (env === 'prod') {
+  resUrl = 'http://47.115.29.244'
+  mp3FilePath = '/root/nginx/upload/mp3'
+}
+
 
 const category = [
   'Biomedicine',

@@ -9,11 +9,11 @@ const ws = require('ws')
 
 
 function createVoice (req, res) {
-  // const text = req.query.text
-  // const lang = req.query.lang
+  const text = req.query.text
+  const lang = req.query.lang
 
-  const text = '测试数据，来长一点吧，水水的'
-  const lang = 'cn'
+  // const text = '测试数据，来长一点吧，水水的'
+  // const lang = 'cn'
   let engineType = 'intp65'
   if (lang.toLowerCase() === 'en') {
     engineType = 'intp65_en'
